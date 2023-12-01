@@ -18,12 +18,12 @@
                     </Frame>
                 </Frame>
 
-                <Label FontFamily="OpenSansRegular" TextColor="White"
+                <Label  Padding="10" FontFamily="OpenSansRegular" TextColor="White"
            FontSize="25" Text="Vincent Van Gogh" VerticalOptions="Fill" HorizontalOptions="Center"/>
-                <Label FontFamily="OpenSansRegular" TextColor="White"
+                <Label Padding="5" FontFamily="OpenSansRegular" TextColor="White"
            FontSize="15" Text="Dutch, 1853 - 1890" VerticalOptions="Center" HorizontalOptions="Center"/>
 
-                <Label FontFamily="OpenSansRegular" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                <Label Padding="5" FontFamily="OpenSansRegular" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
            FontSize="17" Text="Was a Dutch Post-Impressionist painter who is among the most famous and influential...ReadMore"/>
 
                 <BoxView Grid.Row="0" Grid.ColumnSpan="3" Color="LightGrey" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Start"/>
@@ -44,18 +44,18 @@
 
                     <!-- Labels for the grid -->
                     <Label Grid.Row="0" Grid.Column="0" TextColor="White" Text="$7.5m" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
-                    <Label Grid.Row="1" Grid.Column="0" TextColor="White" Text="Record " FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+                    <Label Grid.Row="1" Grid.Column="0" TextColor="White" Text="Record " FontSize="20" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
                     <Label Grid.Row="0" Grid.Column="1" TextColor="White" Text="$3.5m" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
-                    <Label Grid.Row="1" Grid.Column="1" TextColor="White" Text="Average" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+                    <Label Grid.Row="1" Grid.Column="1" TextColor="White" Text="Average" FontSize="20" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
                     <Label Grid.Row="0" Grid.Column="2" TextColor="White" Text="+598%" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
-                    <Label Grid.Row="1" Grid.Column="2" TextColor="White" Text="General" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+                    <Label Grid.Row="1" Grid.Column="2" TextColor="White" Text="General" FontSize="20" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
                     <Label Grid.Row="0" Grid.Column="3" TextColor="White" Text="12" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
-                    <Label Grid.Row="1" Grid.Column="3" TextColor="White" Text="Items" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+                    <Label Grid.Row="1" Grid.Column="3" TextColor="White" Text="Items" FontSize="20" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
                 </Grid>
                 <BoxView Grid.Row="0" Grid.ColumnSpan="3" Color="LightGrey" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Start"/>
 
-                <Label FontFamily="OpenSansRegular" TextColor="White"
-                FontSize="20" Text="Other Van Gogh Works" VerticalOptions="Start" HorizontalOptions="Start"/>
+                <Label Padding="18" FontFamily="OpenSansRegular" TextColor="White"
+                FontSize="20" Text="Other Van Gogh Works" FontAttributes="Bold" VerticalOptions="Start" HorizontalOptions="Start"/>
 
                 <CollectionView ItemsSource="{Binding ImageItems}">
                     <CollectionView.ItemsLayout>
