@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProgressTest.MainPage"
+             BackgroundColor="Black">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Margin="0,10,0,0"
+            Spacing="30"
+            Padding="0"
+            VerticalOptions="Center">
+
+            <StackLayout VerticalOptions="Center" Orientation="Vertical">
+                <Frame CornerRadius="90" WidthRequest="80" HeightRequest="80" HasShadow="True" VerticalOptions="Start" BorderColor="Orange" Padding="2" BackgroundColor="Orange">
+                    <Frame CornerRadius="90" WidthRequest="75" HeightRequest="75" HasShadow="True" VerticalOptions="Start">
+                        <Image Source="vvg.jpg" WidthRequest="90" HeightRequest="90" Margin="0,0,0,0" Aspect="AspectFill" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    </Frame>
+                </Frame>
+
+                <Label FontFamily="OpenSansRegular" TextColor="White"
+           FontSize="25" Text="Vincent Van Gogh" VerticalOptions="Fill" HorizontalOptions="Center"/>
+                <Label FontFamily="OpenSansRegular" TextColor="White"
+           FontSize="15" Text="Dutch, 1853 - 1890" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+                <Label FontFamily="OpenSansRegular" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+           FontSize="17" Text="Was a Dutch Post-Impressionist painter who is among the most famous and influential...ReadMore"/>
+
+                <BoxView Grid.Row="0" Grid.ColumnSpan="3" Color="LightGrey" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Start"/>
+                <Grid BackgroundColor="Black">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Labels for the grid -->
+                    <Label Grid.Row="0" Grid.Column="0" TextColor="White" Text="$7.5m" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+                    <Label Grid.Row="1" Grid.Column="0" TextColor="White" Text="Record " FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+                    <Label Grid.Row="0" Grid.Column="1" TextColor="White" Text="$3.5m" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+                    <Label Grid.Row="1" Grid.Column="1" TextColor="White" Text="Average" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+                    <Label Grid.Row="0" Grid.Column="2" TextColor="White" Text="+598%" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+                    <Label Grid.Row="1" Grid.Column="2" TextColor="White" Text="General" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+                    <Label Grid.Row="0" Grid.Column="3" TextColor="White" Text="12" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+                    <Label Grid.Row="1" Grid.Column="3" TextColor="White" Text="Items" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+                </Grid>
+                <BoxView Grid.Row="0" Grid.ColumnSpan="3" Color="LightGrey" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Start"/>
+
+                <Label FontFamily="OpenSansRegular" TextColor="White"
+                FontSize="20" Text="Other Van Gogh Works" VerticalOptions="Start" HorizontalOptions="Start"/>
+
+                <CollectionView ItemsSource="{Binding ImageItems}">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="2" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="5">
+                                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                    <Image Source="{Binding ImagePath}" Aspect="AspectFill" />
+                                    <Label Text="{Binding ImageText}" TextColor="White" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" Margin="10,10,0,0" />
+                                    <Label Text="{Binding ImagePrice}" TextColor="White" VerticalOptions="Center" HorizontalOptions="Start" Margin="10,10,0,0" />
+                                </StackLayout>
+
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

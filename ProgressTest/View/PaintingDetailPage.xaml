@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProgressTest.View.PaintingDetailPage"
+             Title="PaintingDetailPage"
+             BackgroundColor="Black">
+
+    <StackLayout VerticalOptions="Center" Orientation="Vertical"  Margin="2">
+        <Frame Margin="-10"
+               BorderColor="Orange"
+               CornerRadius="120"
+               HeightRequest="120"
+               WidthRequest="120"
+               IsClippedToBounds="True"
+               HorizontalOptions="Center"
+               VerticalOptions="Center">
+            <Image Source="vvg.jpg"
+                   Aspect="AspectFill"
+                   Margin="50"
+                   HeightRequest="200"
+                   WidthRequest="200" />
+        </Frame>
+
+        <Label FontFamily="OpenSansRegular" TextColor="White"
+               FontSize="25" Text="Vincent Van Gogh" VerticalOptions="Fill" HorizontalOptions="Center"/>
+        <Label FontFamily="OpenSansRegular" TextColor="White"
+               FontSize="15" Text="Dutch, 1853 - 1890" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+        <Label FontFamily="OpenSansRegular" TextColor="White"
+               FontSize="17" Text="Was a Dutch Post-Impressionist painter who is among the most famous and influential...ReadMore" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+
+        <Grid BackgroundColor="Gray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Labels for the grid -->
+            <Label Grid.Row="0" Grid.Column="0" TextColor="White" Text="$7.5m" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+            <Label Grid.Row="1" Grid.Column="0" TextColor="White" Text="Record " FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+            <Label Grid.Row="0" Grid.Column="1" TextColor="White" Text="$3.5m" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+            <Label Grid.Row="1" Grid.Column="1" TextColor="White" Text="Average" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+            <Label Grid.Row="0" Grid.Column="2" TextColor="White" Text="+598%" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+            <Label Grid.Row="1" Grid.Column="2" TextColor="White" Text="General" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+            <Label Grid.Row="0" Grid.Column="3" TextColor="White" Text="12" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+            <Label Grid.Row="1" Grid.Column="3" TextColor="White" Text="Items" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0,0,0,0" />
+        </Grid>
+
+
+        <Label FontFamily="OpenSansRegular" TextColor="White"
+        FontSize="20" Text="Other Van Gogh Works" VerticalOptions="Start" HorizontalOptions="Start"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Image in Row 0, Column 0 -->
+            <Image Grid.Row="0" Grid.Column="0"
+               Source="peachtree.png"
+               Aspect="AspectFill" />
+
+            <!-- Labels for Name and Price below Image 0 -->
+            <Label Grid.Row="1" Grid.Column="0" Text="Peach Tree In Blossom"  TextColor ="Black" HorizontalOptions="Center" VerticalOptions="Start" />
+            <Label Grid.Row="2" Grid.Column="1" Text="$950,000" TextColor ="Black" HorizontalOptions="Center" VerticalOptions="End" />
+
+            <!-- Image in Row 0, Column 1 -->
+            <Image Grid.Row="0" Grid.Column="1"
+               Source="cafe.jpg"
+               Aspect="AspectFill" />
+
+            <!-- Labels for Name and Price below Image 1 -->
+            <Label Grid.Row="1" Grid.Column="1" Text="Cafe" TextColor ="White" HorizontalOptions="Center" VerticalOptions="Start" />
+            <Label Grid.Row="1" Grid.Column="1" Text="$29.99" TextColor ="White" HorizontalOptions="Center" VerticalOptions="End" />
+
+            <!-- Add more images and labels as needed -->
+
+            <!-- Image in Row 1, Column 0 -->
+            <Image Grid.Row="2" Grid.Column="0"
+               Source="starrynight.png"
+               Aspect="AspectFill" />
+
+            <!-- Labels for Name and Price below Image 2 -->
+            <Label Grid.Row="3" Grid.Column="0" Text="Starry Night" TextColor ="White" HorizontalOptions="Center" VerticalOptions="Start" />
+            <Label Grid.Row="3" Grid.Column="0" Text="$100 million" TextColor ="White" HorizontalOptions="Center" VerticalOptions="End" />
+
+            <!-- Image in Row 1, Column 1 -->
+            <Image Grid.Row="2" Grid.Column="1"
+               Source="sunflowers.jpg"
+               Aspect="AspectFill" />
+
+            <!-- Labels for Name and Price below Image 3 -->
+            <Label Grid.Row="3" Grid.Column="1" Text="Sunflowers" TextColor ="White" HorizontalOptions="Center" VerticalOptions="Start" />
+            <Label Grid.Row="3" Grid.Column="1" Text="$40 million" TextColor ="White" HorizontalOptions="Center" VerticalOptions="End" />
+        </Grid>
+    </StackLayout>
+</ContentPage>
